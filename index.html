@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <main>
+        <div id="list" class="separar">
+            <h1>{{mensaje}}</h1>
+            <input type="text" placeholder="Buscar persona" v-model="busqueda">
+        </div>
+        <div id="list" class="separar">
+            <ul>
+                <li v-for="persona in searchPerson">
+                    <p>{{persona.name.first}}</p>
+                    <img :src="persona.picture.large">
+                </li>
+            </ul>
+        </div>        
+        
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
